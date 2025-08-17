@@ -1,0 +1,679 @@
+.home-page {
+  width: 100%;
+  overflow-x: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; 
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  background-image: 
+    linear-gradient(to bottom, rgba(5, 15, 30, 0.481), rgba(0, 0, 0, 0.53)),
+    url('../../assets/home.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  padding: 20px;
+  z-index: 2;
+}
+
+.home-header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  max-width: 750px;
+  margin: 0 auto 40px auto;
+  opacity: 0.95;
+  line-height: 1.6;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: #007bff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Professional Section Headings --- */
+.how-it-works-section h2,
+.team-section h2,
+.quotes-section h2,
+.faq-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+.how-it-works-section h2::after,
+.team-section h2::after,
+.quotes-section h2::after,
+.faq-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background-color: #3498db;
+    border-radius: 2px;
+}
+
+/* Longer underlines for specific centered headings */
+.quotes-section h2::after {
+    width: 230px;
+}
+
+.faq-section h2::after{
+    width: 300px;
+}
+
+.team-section h2::after{
+    width: 120px;
+}
+/* Centered Headings */
+.team-section h2,
+.quotes-section h2,
+.faq-section h2 {
+    text-align: center;
+}
+
+.team-section h2::after,
+.quotes-section h2::after,
+.faq-section h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* --- How It Works Section --- */
+.how-it-works-section {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #e7e7e7;
+}
+
+/* Left-Aligned Heading */
+.how-it-works-section h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.how-it-works-layout {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.how-it-works-description,
+.how-it-works-video {
+    flex: 1;
+}
+
+.how-it-works-section h2::after {
+    left: 0;
+    width: 230px; /* Make the underline longer for this specific heading */
+}
+
+.how-it-works-description {
+    text-align: left;
+}
+
+.how-it-works-description p {
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.8;
+}
+
+.how-it-works-description ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 25px 0;
+}
+
+.how-it-works-description li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #5a6a7b;
+}
+
+.how-it-works-description li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: #3498db;
+    font-size: 1.5rem;
+}
+
+.how-it-works-description li strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.how-it-works-video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.how-it-works-footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.documentation-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.documentation-link:hover {
+    border-color: #3498db;
+}
+/* --- Team Section --- */
+.team-section {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #f8f9fa; /* Light grey for better contrast with white cards */
+    border-top: 1px solid #e9ecef;
+}
+
+/* Responsive Grid Layout */
+/* Asymmetrical Grid Layout for Team Section */
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e9ecef80;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02), 0 10px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04), 0 15px 30px rgba(0, 0, 0, 0.03);
+}
+
+/* Span the first two cards across 3 columns each (2 cards per row) */
+.team-member-card:nth-child(1),
+.team-member-card:nth-child(2) {
+    grid-column: span 3;
+}
+
+/* Span the next three cards across 2 columns each (3 cards per row) */
+.team-member-card:nth-child(3),
+.team-member-card:nth-child(4),
+.team-member-card:nth-child(5) {
+    grid-column: span 2;
+}
+
+.team-member-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the profession and year under the image */
+.team-member-card > p {
+    margin: 0;
+    color: #5a6a7b;
+    font-weight: 600;
+}
+
+.team-member-card > p:first-of-type { /* Targets 'profess' */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.team-member-card > p:nth-of-type(2) { /* Targets 'year' */
+    font-size: 0.9rem;
+    color: #88929b;
+    margin-bottom: 25px; /* Space before the main info */
+}
+
+.team-member-info {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.team-member-info h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.team-member-info h4 {
+    font-size: 1rem;
+    color: #3498db;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+
+.team-member-info p {
+    font-size: 0.95rem;
+    color: #5a6a7b;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 800px) {
+    .how-it-works-layout {
+        flex-direction: column;
+        text-align: center;
+
+    }    
+    .how-it-works-footer{
+        margin-top: 390px;
+        text-align: center;        
+    }
+}
+
+/* Responsive adjustments for team section */
+@media (max-width: 960px) { /* Widen breakpoint for better aesthetics */
+    .team-members {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    /* Reset column spanning for smaller screens */
+    .team-member-card:nth-child(n) {
+        grid-column: auto;
+    }
+}
+
+/* --- Quotes Section / Testimonials --- */
+.quotes-section {
+    width: 100%;
+    padding: 100px 20px;
+    /* Subtle gradient background for the entire section */
+    background: #fff;
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Container to position arrows relative to the card */
+.testimonial-container {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px; /* Space for arrows */
+}
+
+/* NEW: Slider viewport to hide non-active cards */
+.testimonial-slider {
+    width: 100%;
+}
+
+/* NEW: Track that holds all cards and slides horizontally */
+.testimonial-track {
+    display: flex;
+    transition: transform 0.6s ; /* Smooth, springy slide transition */
+}
+
+/* The main testimonial card */
+.testimonial-card {
+    /* Soft radial gradient background for the card */
+    /* Background is now set via nth-child selectors for variety */
+    border-radius: 30px; /* Large, pill-like rounded corners */
+    padding: 50px 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Helps vertically align content in cards of the same height */
+    /* Softer drop shadow to lift the card */
+    box-shadow: 0 15px 40px rgba(80, 90, 130, 0.062);
+    /* Slider-specific styles */
+    width: 98%; /* Slightly less than 100% to create a visual gap */
+    margin: 0 1%; /* Centers the card in its slot, creating the other half of the gap */
+    min-height: 450px; /* Ensures all cards have a consistent minimum height */
+    flex-shrink: 0; /* Prevents cards from shrinking */
+    box-sizing: border-box; /* Ensures padding is included in the 100% width */
+}
+
+/* Different professional background colors for each card */
+.testimonial-card:nth-child(1) {
+    background-color: #f4f0ff; /* Light Lavender */
+}
+.testimonial-card:nth-child(2) {
+    background-color: #e8f5e9; /* Soft Mint Green */
+}
+.testimonial-card:nth-child(3) {
+    background-color: #e3f2fd; /* Light Sky Blue */
+}
+.testimonial-card:nth-child(4) {
+    background-color: #fff3e0; /* Pale Peach */
+}
+.testimonial-card:nth-child(5) {
+    background-color: #f5f5f5; /* Light Grey */
+}
+
+/* Company logo at the top */
+.testimonial-logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e3a5f; /* Dark navy blue */
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* The main quote text */
+.testimonial-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e3a5f; /* Dark navy blue */
+    line-height: 1.5;
+    margin: 0 0 35px 0;
+    max-width: 650px;
+}
+
+/* Author section container */
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Circular avatar image */
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.author-details {
+    line-height: 1.4;
+}
+
+/* Author's name */
+.author-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1e3a5f;
+    margin: 0;
+}
+
+/* Author's title/role */
+.author-title {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Navigation arrows */
+.quotes-section .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #4a5a8a;
+    transition: all 0.3s ease;
+    z-index: 1; /* Ensure button is on top of its pseudo-element */
+}
+
+/* Gradient ring effect for arrows */
+.quotes-section .nav-arrow::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #a981ff00, #64b4f600);
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+.quotes-section .nav-arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.071);
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+    .testimonial-container {
+        padding: 0; /* Remove side padding for arrows to sit on card */
+    }
+
+    .testimonial-card {
+        padding: 40px;
+        border-radius: 20px;
+    }
+
+    .quotes-section .nav-arrow {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .left-arrow {
+        left: 15px;
+    }
+
+    .right-arrow {
+        right: 15px;
+    }
+
+    .testimonial-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .quotes-section {
+        padding: 60px 15px;
+    }
+
+    .testimonial-card {
+        padding: 30px 20px;
+    }
+
+    .testimonial-text {
+        font-size: 1.2rem;
+    }
+
+    .quotes-section .nav-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .left-arrow {
+        left: 5px;
+    }
+
+    .right-arrow {
+        right: 5px;
+    }
+}
+
+/* --- FAQ Section --- */
+.faq-section {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.faq-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    transition: box-shadow 0.1s ease;
+    overflow: hidden; /* Ensures border-radius is respected by children */
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #34495e;
+    margin: 0;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.faq-item.active .faq-question {
+    color: #3498db; 
+}
+
+.faq-icon {
+    flex-shrink: 0; /* Prevents icon from shrinking on smaller screens */
+    margin-left: 20px;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #3498db;
+    border-bottom: 2px solid #3498db;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(135deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 25px;
+    line-height: 1.7;
+    background-color: #f8f9fa; /* Light background for the answer area */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust if answers are longer */
+    padding: 20px 25px;
+}
+
+.faq-answer p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}

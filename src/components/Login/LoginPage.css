@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+/* 
+  NOTE: The styles below for .auth-container, .auth-form, etc., appear to be for a separate, simpler login form.
+  They are being overridden by the more specific .login-card styles below. 
+  For better maintainability, consider moving these to a separate CSS file if they are used by a different component.
+*/
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: 80vh;
+}
+
+.auth-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-form h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.auth-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #2980b9;
+}
+
+.switch-auth {
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d;
+}
+
+.switch-auth a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-auth a:hover {
+    text-decoration: underline;
+}
+
+.login-wrapper {
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    background: #f6f8fa;
+}
+
+.login-page-bg {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #eaf4fb 0%, #f8f9fa 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    /* Add horizontal padding for smaller screens */
+    padding: 40px 20px;
+}
+
+.login-card {
+    display: flex;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(52, 152, 219, 0.13), 0 1.5px 6px rgba(44, 62, 80, 0.08);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    margin: 0; /* Margin is handled by padding on parent */
+}
+
+.login-brand-panel {
+    background: linear-gradient(135deg, #eaf4fb 60%, #d0e6fa 100%);
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 40px;
+    border-right: 1px solid #bcdffb;
+}
+
+.brand-icon {
+    margin-bottom: 28px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(52, 152, 219, 0.10);
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-brand-panel h1 {
+    color: #22364a;
+    font-size: clamp(1.8rem, 5vw, 2.3rem); /* Responsive font size */
+    font-weight: 700;
+    margin-bottom: 22px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.login-brand-panel p {
+    color: #3498db;
+    font-size: 1.13rem;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.login-form-panel {
+    background: #fff;
+    padding: 64px 40px;
+    border-radius: 0 24px 24px 0;
+    box-shadow: none;
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form-panel h2 {
+    text-align: center;
+    color: #22364a;
+    margin-bottom: 38px;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.form-group {
+    margin-bottom: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group label {
+    align-self: flex-start;
+    margin-bottom: 12px;
+    color: #22364a;
+    font-weight: 500;
+    font-size: 1.12rem;
+    letter-spacing: 0.2px;
+}
+
+.form-group input {
+    width: 100%;
+    max-width: 800px;
+    min-width: 430px;
+    height: auto;
+    margin: 0 auto;
+    padding: 18px 24px;
+    border: 1.5px solid #bcdffb;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background: #f6f8fa;
+    color: #22364a;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.13);
+    background: #eaf4fb;
+}
+
+.auth-button {
+    width: 100%;
+    max-width: 450px;
+    min-width: 420px;
+    padding: 16px 0;
+    background: linear-gradient(90deg, #3498db 70%, #217dbb 100%);
+    color: #fff;
+    font-size: 1.22rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-left: auto;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.auth-button:hover {
+    background: linear-gradient(90deg, #217dbb 70%, #3498db 100%);
+    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.13);
+}
+
+.switch-auth {
+    margin-top: 28px;
+    text-align: center;
+    color: #22364a;
+    font-size: 1.08rem;
+}
+
+.switch-auth a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.switch-auth a:hover {
+    text-decoration: underline;
+    color: #217dbb;
+}
+
+.login-success-toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    background: #27ae60;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(39, 174, 96, 0.15);
+    z-index: 9999;
+    animation: fadeIn 0.3s;
+}
+
+.login-error-toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    background: #e74c3c; /* Red for error */
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(231, 76, 60, 0.2);
+    z-index: 9999;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .login-card {
+        flex-direction: column;
+        margin: 0; /* Let parent padding handle spacing */
+    }
+
+    .login-brand-panel {
+        /* Add border-radius to the top corners when stacked */
+        border-radius: 24px 24px 0 0;
+        border-right: none;
+        padding: 48px 32px;
+        max-width: 100%;
+    }
+
+    .login-form-panel {
+        /* Add border-radius to the bottom corners when stacked */
+        border-radius: 0 0 24px 24px;
+        border-right: none;
+        padding: 48px 32px;
+        max-width: 100%;
+    }
+
+    .brand-icon {
+        padding: 18px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+     
+    .login-page-bg {
+        padding: 20px 15px; /* Less padding on small screens */
+        border-radius: 12px;
+    }
+
+    .login-form-panel h2 {
+        font-size: 1.8rem; /* Smaller heading for mobile */
+        margin-bottom: 32px;
+    }
+
+    .login-brand-panel,
+    .login-form-panel {
+        padding: 32px 20px; /* Adjust padding for mobile */
+    }
+
+    .form-group input,
+    .auth-button {
+        font-size: 1.1rem; /* Slightly smaller font for inputs/button on mobile */
+        padding: 14px 20px; /* Adjust padding for smaller screens */
+        border-radius: 8px;
+        width: 100%;
+        max-width: 100%; /* Full width on mobile */
+        min-width: 300px; /* Ensure a minimum width for usability */
+    }
+}

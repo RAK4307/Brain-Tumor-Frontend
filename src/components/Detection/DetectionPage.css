@@ -1,0 +1,252 @@
+.detection-page {
+    padding: 40px 20px;
+    background-color: #f4f7f9;
+    min-height: calc(100vh - 75px); /* Adjust based on your header/footer height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.detection-container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.detection-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.detection-header h1 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.detection-header p {
+    font-size: 1.1rem;
+    color: #5a6a7b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.uploader-container {
+    width: 100%;
+    border: 2px dashed #bdc3c7;
+    border-radius: 12px;
+    padding: 40px;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.uploader-container:hover,
+.uploader-container.dragging-over {
+    border-color: #3498db;
+    background-color: #f8f9fa;
+}
+
+.file-input-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #5a6a7b;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #3498db;
+}
+
+#file-upload {
+    display: none;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.analyze-button,
+.reset-button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.analyze-button {
+    background-color: #3498db;
+    color: white;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.analyze-button:hover:not(:disabled) {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(52, 152, 219, 0.25);
+}
+
+.analyze-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.reset-button {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border: 1px solid #bdc3c7;
+}
+
+.reset-button:hover:not(:disabled) {
+    background-color: #e0e0e0;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Result Area --- */
+.result-area {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.result-area h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.result-images-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.result-image-card {
+    flex: 1;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.result-image-card h3 {
+    font-size: 1.3rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.result-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-summary {
+    border-top: 1px solid #e9ecef;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.summary-title {
+    font-weight: 600;
+    color: #34495e;
+}
+
+.summary-value {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.prediction-label {
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+}
+
+.prediction-label.tumor {
+    background-color: #e74c3c;
+}
+
+.prediction-label.no-tumor {
+    background-color: #2ecc71;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #fbe9e7;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ffab91;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .result-images-container {
+        flex-direction: column;
+    }
+
+    .detection-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .result-area h2 {
+        font-size: 1.8rem;
+    }
+}

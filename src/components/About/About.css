@@ -1,0 +1,380 @@
+/* General About Page Styling */
+.about-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #333;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #3498db;
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+}
+
+.about-section > p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #34495e;
+}
+
+/* Video Section */
+.video-section {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Data & Charts Section */
+.data-section h2 {
+  text-align: center;
+  display: block;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+/* Make the data section full-width */
+.data-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f8f9fa; /* A subtle, opaque background color for the full-width section */
+  padding: 60px 20px; /* Vertical padding and side padding for mobile */
+  
+  /* Override default .about-section styles */
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 40px;
+  margin-bottom: 0; /* Remove bottom margin to connect with the next section */
+}
+
+/* Create an inner container to constrain the content to the page's max-width */
+.data-section-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  
+}
+
+.data-section .data-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #34495e;
+}
+
+.data-section .data-source {
+  font-size: 0.85rem;
+  color: #88929b;
+  text-align: center;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+.data-section .stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Space between the two rows */
+  margin: 2rem 0;
+}
+
+.data-section .stats-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.data-section .stats-row--reverse {
+  flex-direction: row-reverse;
+}
+
+.data-section .stats-row--reverse .stats-text {
+  padding-left: 2rem;
+  padding-right: 0;
+}
+
+.data-section .stats-text {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.data-section .stats-text h3 {
+  margin-bottom: 1rem;
+  color: #1a253c;
+  font-size: 1.5rem;
+}
+
+.data-section .stats-text p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.data-section .chart-wrapper {
+  flex: 1;
+  min-width: 0; /* Prevents chart from overflowing flex container */
+  background-color: #ffffff00; /* White background for the chart card */
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: 400px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0); /* Subtle shadow to match doctor cards */
+}
+
+.data-section .chart-wrapper h4 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Doctors Section */
+.doctors-section {
+  /* Make it full-width, creating an alternating color band with the data section */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff; /* A clean, neutral background */
+  padding: 60px 20px;
+
+  /* Override default .about-section styles */
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 0; /* Remove top margin to sit flush against the data section */
+  margin-bottom: 40px; /* Add margin at the bottom of the page content */
+}
+
+.doctors-section-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.doctors-section h2 {
+  text-align: center;
+  display: block;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.doctors-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5a6a7b;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.doctor-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(52, 152, 219, 0.1);
+}
+
+.doctor-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 25px auto;
+  border: 5px solid #e0e7ff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.doctor-card .doctor-specialization {
+  font-size: 1rem;
+  color: #3498db;
+  font-weight: 500;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.doctor-card .doctor-description {
+  font-size: 0.95rem;
+  color: #5a6a7b;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.doctor-card .doctor-location {
+  font-size: 0.9rem;
+  color: #88929b;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+
+/* For Tablets and larger mobile devices */
+@media (max-width: 992px) {
+  .about-header h1 {
+    font-size: 2.8rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .data-section .stats-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .data-section .chart-wrapper {
+    height: auto; /* Adjust chart height for tablets */
+  }
+
+  .data-section .stats-row,
+  .data-section .stats-row--reverse {
+    flex-direction: column;
+  }
+
+  .data-section .stats-text {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .data-section .stats-row--reverse .stats-text {
+    padding-left: 0; /* Reset for stacked layout */
+  }
+}
+
+/* For smaller mobile phones */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 20px 15px;
+  }
+
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-section > p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .about-section {
+    padding: 25px 20px;
+  }
+
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .data-section, .doctors-section {
+    padding: 40px 20px;
+  }
+
+  .data-section .stats-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .data-section .chart-wrapper {
+    height: 260px; /* Further reduce chart height for mobile */
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr; /* Switch to a single column on mobile */
+  }
+}
+
+/* For very small mobile phones */
+@media (max-width: 480px) {
+  .data-section .chart-wrapper {
+    height: 220px; /* Make charts even more compact on small screens */
+  }
+}
