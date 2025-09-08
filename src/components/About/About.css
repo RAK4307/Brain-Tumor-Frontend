@@ -375,6 +375,116 @@
 /* For very small mobile phones */
 @media (max-width: 480px) {
   .data-section .chart-wrapper {
-    height: 220px; /* Make charts even more compact on small screens */
+    height: 300px; /* Make charts even more compact on small screens */
   }
 }
+
+/* --- Professional Mobile Chart Styling --- */
+@media (max-width: 768px) {
+  .data-section .chart-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    height: 180px;
+    min-height: 120px;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(44, 62, 80, 0.07);
+    background: #ffffff;
+    margin: 0 auto 1.2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  .data-section .chart-wrapper h4 {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 700;
+    color: #222;
+    background: rgba(255,255,255,0.85);
+    border-radius: 6px;
+    padding: 2px 0;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+  }
+}
+
+@media (max-width: 480px) {
+  .data-section .chart-wrapper {
+    max-width: 98vw;
+    height: 120px;
+    min-height: 47vh;
+    padding: 0.5rem 0.1rem 0.3rem 0.1rem;
+    border-radius: 8px;
+  }
+  .data-section .chart-wrapper h4 {
+    font-size: 0.95rem;
+    bottom: 6px;
+    padding: 1px 0;
+  }
+}
+/* --- End Professional Mobile Chart Styling --- */
+
+/* --- Professional Embedded Video Styling (YouTube-like) --- */
+.about-video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  width: 100%;
+  height: auto;
+}
+
+.about-video-section video,
+.about-video-section iframe {
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 16/9;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.14);
+  background: #000;
+  display: block;
+  outline: none;
+  border: none;
+  transition: box-shadow 0.3s, border-radius 0.3s;
+}
+
+@media (max-width: 992px) {
+  .about-video-section video,
+  .about-video-section iframe {
+    max-width: 98vw;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-video-section {
+    margin: 1.2rem 0;
+    width: 100%;
+    height: auto;
+  }
+  .about-video-section video,
+  .about-video-section iframe {
+    max-width: 130vw;
+    aspect-ratio: 16/9;
+    height: 56.25vw; /* Maintain 16:9 aspect ratio */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-video-section video,
+  .about-video-section iframe {
+    border-radius: 8px;
+  }
+}
+/* --- End Professional Embedded Video Styling --- */

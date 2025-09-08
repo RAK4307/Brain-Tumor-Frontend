@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { useAuth } from '../../context/AuthContext';
 import './SignupPage.css';
 import logIcon from '../../assets/login.png'; // Adjust path if needed
 
@@ -13,7 +12,6 @@ function SignupPage() {
     const [message, setMessage] = useState('');
     const [isError, setIsError] = useState(false);
     const navigate = useNavigate();
-    const { login } = useAuth();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -33,11 +31,10 @@ function SignupPage() {
                 password,
             });
 
-            const { token } = response.data;
-            login(token); // Log the user in automatically
-
-            setMessage('Signup successful! Redirecting...');
-            setTimeout(() => navigate('/detection'), 1500);
+            setMessage('Signup successfully! Redirecting to login page...');
+            setTimeout(() => {
+                navigate('/login');
+            }, 2000);
         } catch (err) {
             setIsError(true);
             console.error("Signup error:", err); // Detailed logging
@@ -92,7 +89,7 @@ function SignupPage() {
                         <label className="signup-form-label" htmlFor="signup-username">Username</label>
                         <input
                             type="text"
-                            id="signup-username"
+                            id="signup-username" 
                             className="signup-form-input"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}

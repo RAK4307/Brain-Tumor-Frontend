@@ -29,3 +29,11 @@ export const pieChartData = {
     },
   ],
 };
+// Example chart data for responsive charts
+// You can adjust the keys and values as per your chart type
+export const chartData = [
+  { name: 'Glioma', value: 400 },
+  { name: 'Meningioma', value: 300 },
+  { name: 'Pituitary', value: 200 },
+  { name: 'No Tumor', value: 100 }
+];

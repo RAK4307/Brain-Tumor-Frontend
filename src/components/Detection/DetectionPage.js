@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Chatbot from '../Chatbot/Chatbot'; // Import the Chatbot
@@ -12,6 +12,7 @@ function DetectionPage() {
     const [isLoading, setIsLoading] = useState(false);
     const [isDragging, setIsDragging] = useState(false);
     const navigate = useNavigate();
+    const fileInputRef = useRef(null);
     const { token, isLoggedIn } = useAuth();
 
     // Helper to convert Base64 string back to a File object
@@ -173,13 +174,10 @@ function DetectionPage() {
     };
  
     const handleReset = () => {
-        setSelectedFile(null);
-        setPreview(null);
-        clearStoredData()
+        clearStoredData();
         // To clear the file input visually
-        const fileInput = document.getElementById('file-upload');
-        if (fileInput) {
-            fileInput.value = null;
+        if (fileInputRef.current) {
+            fileInputRef.current.value = null;
         }
     };
 
@@ -209,6 +207,7 @@ function DetectionPage() {
                     <input
                         id="file-upload"
                         type="file"
+                        ref={fileInputRef}
                         accept="image/*"
                         onChange={handleFileChange}
                     />

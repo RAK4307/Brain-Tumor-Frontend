@@ -1,0 +1,16 @@
+{
+  "short_name": "BrainTumorDetection",
+  "name": "Brain Tumor Detection App",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3498db",
+  "description": "A web app for brain tumor detection and research."
+}

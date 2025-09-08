@@ -37,6 +37,7 @@ function Navbar() {
         {isLoggedIn ? (
           <> 
             <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
+            <NavLink to="/about" onClick={closeMenu}>About</NavLink>
             <NavLink to="/detection" onClick={closeMenu}>Detection</NavLink>
             <NavLink to="/history" onClick={closeMenu}>History</NavLink>
             <button className="navbar-logout" onClick={handleLogout}>Logout</button>

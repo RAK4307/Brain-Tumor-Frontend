@@ -34,14 +34,14 @@ const About = () => {
 
       <div className="about-content">
         <section className="about-section video-section">
-          <div className="video-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/cSeXJKSQpiI" // A detailed video from Johns Hopkins
-              title="Brain Tumors: An Overview"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          <div className="about-video-section">
+            <video
+              src={require('../../assets/Videos/Brain-tumor.mp4')}
+              controls
+              poster={require('../../assets/home.jpg')}              
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </section>
 

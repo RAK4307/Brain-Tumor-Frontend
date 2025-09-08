@@ -2,62 +2,108 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css';
 import Chatbot from '../Chatbot/Chatbot';
-import profileImage from '../../assets/profile.jpg';
+import profileImage1 from '../../assets/Team/Anil.jpg'; 
+import profileImage2 from '../../assets/Team/Sai.jpg'; 
+import profileImage3 from '../../assets/Team/Harsha.jpg';
+import profileImage4 from '../../assets/Team/Raju.jpg';
+
+import Alex from '../../assets/Research-imgs/alex.png'
+import Ben from '../../assets/Research-imgs/ben.jpeg'
+import Sarah from '../../assets/Research-imgs/sarah.jpeg'
+import David from '../../assets/Research-imgs/David.jpeg'
+import Evelyn from '../../assets/Research-imgs/evelyn.jpeg'
 
 const infoSections = [
   {
     id: 'team',
     title: 'Our Team',
     members: [
-      { name: 'Vamsi', role: 'Project Lead & AI Developer', profess: 'Student', year: '2022 - 2026', bio: 'Vamsi leads the project and developed the core deep learning model. His work involved training and fine-tuning the CNN for high-accuracy classification of brain MRI scans.', imgSrc: profileImage },
-      { name: 'R. Anil Kumar', role: 'Frontend Developer', profess: 'Student', year: '2022 - 2026', bio: 'Anil designed and built the user-friendly interface. He focused on creating a seamless experience for users to upload their MRI scans and view the analysis results clearly.', imgSrc: profileImage },
-      { name: 'T. Sai Kumar', role: 'Backend Developer', profess: 'Student', year: '2022 - 2026', bio: 'Sai Kumar architected the backend infrastructure, creating the Flask API that serves the TensorFlow model and manages secure image processing.', imgSrc: 'https://i.pravatar.cc/150?img=25' },
-      { name: 'A. Harsha', role: 'Data & Research', profess: 'Student', year: '2022 - 2026', bio: 'Harsha was responsible for sourcing, cleaning, and augmenting the brain MRI dataset. His meticulous data preparation was crucial for the model\'s performance and reliability.', imgSrc: 'https://i.pravatar.cc/150?img=12' },
-      { name: 'D. Raju', role: 'UI/UX & Testing', profess: 'Student', year: '2022 - 2026', bio: 'Raju focused on the user experience and conducted rigorous testing to ensure the platform is intuitive, accessible, and bug-free, bridging the gap between a technical tool and a usable product.', imgSrc: 'https://i.pravatar.cc/150?img=32' },
+      { name: 'Vamsi', role: 'Mentor & Project Guide', profess: 'Associate Professor, Department of Computer Science and Engineering, VLITS', year: '2022 - 2026', bio: 'As Mentor and Project Guide, Vamsi provides expert guidance and leadership throughout the project lifecycle. With deep expertise in computer science and engineering, he ensures the team follows best practices in AI and software development, and his mentorship is instrumental in achieving high-accuracy results for brain MRI classification.', imgSrc: profileImage1 },
+      { name: 'R. Anil Kumar', role: 'Project Lead & Full Stack Developer', profess: 'Student', year: '2022 - 2026', bio: 'Anil Kumar leads the team as Project Lead and Full Stack Developer, overseeing both frontend and backend development. He specializes in building seamless user interfaces and robust server-side logic, ensuring users can easily upload MRI scans and receive clear, actionable analysis.', imgSrc: profileImage1 },
+      { name: 'T. Sai Kumar', role: 'Documentation & Research Assistant', profess: 'Student', year: '2022 - 2026', bio: 'Sai Kumar excels in technical documentation and research, supporting the team with thorough literature reviews and clear project documentation. He also assists in backend development, helping to architect secure APIs and manage data flow for reliable model serving.', imgSrc: profileImage2 },
+      { name: 'A. Harsha', role: 'ML Engineer', profess: 'Student', year: '2022 - 2026', bio: 'Harsha is the team’s Machine Learning Engineer, responsible for data sourcing, cleaning, and augmentation. His expertise in preparing medical imaging datasets and optimizing model training directly contributes to the project’s high performance and reliability.', imgSrc: profileImage3 },
+      { name: 'D. Raju', role: 'UI/UX & Testing', profess: 'Student', year: '2022 - 2026', bio: 'Raju specializes in UI/UX design and testing, ensuring the platform is intuitive, accessible, and visually appealing. He conducts rigorous usability and functional testing, bridging the gap between technical innovation and a user-friendly product.', imgSrc: profileImage4 },
         ],
   },
   { 
-    id: 'quotes',
+    id: 'research-insights',
     title: 'From the Research',
     quotes: [
       {
         logoText: 'Stanford Medicine',
         text: "Tools like this are invaluable for preliminary screening. The ability to get a rapid, AI-driven analysis empowers clinicians to prioritize cases and can significantly accelerate the diagnostic pathway for patients.",
-        authorAvatar: 'https://i.pravatar.cc/150?img=47',
+        authorAvatar: Evelyn,
         authorName: 'Dr. Evelyn Reed',
         authorTitle: 'Chief of Neuroradiology, Stanford Hospital',
       },
       {
         logoText: 'MIT CSAIL',
         text: "The architecture of this CNN model demonstrates a sophisticated approach to medical image classification. It's a powerful example of how targeted deep learning can solve complex, real-world problems in healthcare.",
-        authorAvatar: 'https://i.pravatar.cc/150?img=53',
+        authorAvatar: Ben,
         authorName: 'Dr. Ben Carter',
         authorTitle: 'Professor of AI in Medicine, MIT',
       },
       {
         logoText: 'Radiology Today',
         text: 'Automated systems for tumor classification can significantly reduce the workload on radiologists and improve diagnostic consistency across institutions.',
-        authorAvatar: 'https://i.pravatar.cc/150?img=5',
+        authorAvatar: Alex,
         authorName: 'Dr. Alex Ray',
         authorTitle: 'Lead Radiologist, Health Inc.',
       },
       {
         logoText: 'Johns Hopkins University',
         text: "As a learning tool for medical students, this platform is exceptional. It provides instant feedback on MRI interpretation, helping to build diagnostic confidence in a controlled, educational environment.",
-        authorAvatar: 'https://i.pravatar.cc/150?img=31',
+        authorAvatar: Sarah,
         authorName: 'Sarah Jenkins',
         authorTitle: 'MD Candidate, Johns Hopkins School of Medicine',
       },
       {
         logoText: 'National Brain Tumor Society',
         text: "Accessible and rapid screening technologies are critical in the fight against brain tumors. Innovations that shorten the time to diagnosis give patients the best possible chance for a positive outcome.",
-        authorAvatar: 'https://i.pravatar.cc/150?img=14',
+        authorAvatar: David,
         authorName: 'David Chen',
         authorTitle: 'Director of Patient Advocacy, NBTS',
       },
     ],
-
   },
+  // {
+  //   id: 'testimonials',
+  //   title: 'What Our Users Say',
+  //   cards: [
+  //       {
+  //           bgColor: 'pastel-green',
+  //           videoThumbnail: 'https://i.pravatar.cc/150?img=31',
+  //           title: 'Medical Student',
+  //           description: '“As a learning tool for medical students, this platform is exceptional. It provides instant feedback on MRI interpretation, helping to build diagnostic confidence.”',
+  //           authorName: 'Sarah Jenkins',
+  //           authorTitle: 'MD Candidate, Johns Hopkins School of Medicine'
+  //       },
+  //       {
+  //           bgColor: 'pastel-purple',
+  //           videoThumbnail: 'https://i.pravatar.cc/150?img=14',
+  //           title: 'Patient Advocacy',
+  //           description: '“Accessible and rapid screening technologies are critical... Innovations that shorten the time to diagnosis give patients the best possible chance for a positive outcome.”',
+  //           authorName: 'David Chen',
+  //           authorTitle: 'Director of Patient Advocacy, NBTS'
+  //       },
+  //       {
+  //           bgColor: 'pastel-blue',
+  //           videoThumbnail: 'https://i.pravatar.cc/150?img=56',
+  //           title: 'Radiology Resident',
+  //           description: '“As a resident, being able to quickly check my interpretation against an AI has been invaluable. It\'s a great way to reinforce learning and catch subtle details.”',
+  //           authorName: 'Dr. Maria Garcia',
+  //           authorTitle: 'Radiology Resident, PGY-3'
+  //       },
+  //       {
+  //           bgColor: 'pastel-lavender',
+  //           videoThumbnail: 'https://i.pravatar.cc/150?img=25',
+  //           title: 'Research Scientist',
+  //           description: '“The platform\'s API integration allowed us to accelerate our research workflow, providing quick, reliable classifications for our large-scale imaging studies.”',
+  //           authorName: 'Dr. Kenji Tanaka',
+  //           authorTitle: 'Lead Researcher, NeuroAI Labs'
+  //       }
+  //   ]
+  // },
   {
     id: 'faq',
     title: 'Frequently Asked Questions',
@@ -98,7 +144,7 @@ function HomePage() {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const quotesData = infoSections.find(s => s.id === 'quotes');
+  const quotesData = infoSections.find(s => s.id === 'research-insights');
 
   const handleNextQuote = () => {
     setCurrentQuoteIndex((prevIndex) => (prevIndex + 1) % quotesData.quotes.length);
@@ -164,20 +210,20 @@ function HomePage() {
                 ))}
               </div>
             )}
-            {section.id === 'quotes' && (
-              <div className="testimonial-container">
+            {section.id === 'research-insights' && (
+              <div className="research-insights-container">
                 <button className="nav-arrow left-arrow" onClick={handlePrevQuote} aria-label="Previous testimonial">&larr;</button>
-                <div className="testimonial-slider">
-                  <div className="testimonial-track" style={{ transform: `translateX(-${currentQuoteIndex * 100}%)` }}>
+                <div className="insights-slider">
+                  <div className="insights-track" style={{ transform: `translateX(-${currentQuoteIndex * 100}%)` }}>
                     {quotesData.quotes.map((quote, index) => (
-                      <div className="testimonial-card" key={index}>
-                        <div className="testimonial-logo">
+                      <div className="insight-card" key={index}>
+                        <div className="insight-logo">
                           <span>&#128279;</span> {quote.logoText}
                         </div>
-                        <blockquote className="testimonial-text">
+                        <blockquote className="insight-text">
                           “{quote.text}”
                         </blockquote>
-                        <div className="testimonial-author">
+                        <div className="insight-author">
                           <img
                             src={quote.authorAvatar}
                             alt={`Avatar of ${quote.authorName}`}
@@ -195,6 +241,27 @@ function HomePage() {
                 <button className="nav-arrow right-arrow" onClick={handleNextQuote} aria-label="Next testimonial">&rarr;</button>
               </div>
             )}
+            {/* {section.id === 'testimonials' && (
+              <div className="testimonials-row">
+                {section.cards.map((card, index) => (
+                  <div className={`testimonial-card ${card.bgColor}`} key={index}>
+                    <div className="testimonial-img-wrapper">
+                      <img src={card.videoThumbnail} alt={card.title} className="testimonial-img" />
+                      <div className="testimonial-video-bar">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 1.5V10.5L10 6L2.5 1.5Z" fill="#344054" stroke="#344054" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        <span>Play Video</span>
+                      </div>
+                    </div>
+                    <h3 className="testimonial-title">{card.title}</h3>
+                    <p className="testimonial-desc">{card.description}</p>
+                    <div className="testimonial-author-details">
+                        <p className="testimonial-author-name">{card.authorName}</p>
+                        <p className="testimonial-author-title">{card.authorTitle}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )} */}
             {section.id === 'faq' && (
               <div className="faq-container">
                 {section.faqs.map((faq, index) => (

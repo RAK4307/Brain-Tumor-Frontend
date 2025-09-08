@@ -49,8 +49,8 @@ function Footer() {
                         <h3 className="footer-title">Follow Us</h3>
                         <div className="footer-underline"></div>
                         <div className="social-icons">
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+                            <a href="https://github.com/RAK4307" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
+                            <a href="https://linkedin.com/in/anil-kumar-rayapudi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
                             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
                         </div>
                     </div>
@@ -58,8 +58,8 @@ function Footer() {
                         <h3 className="footer-title">Contact Us</h3>
                         <div className="footer-underline"></div>
                         <div className="contact-info">
-                            <p><FaEnvelope /> info@braintumordetection.com</p>
-                            <p><FaPhone /> +1 (123) 456-7890</p>
+                            <p><FaEnvelope /> kanil25566@gmail.com</p>
+                            <p><FaPhone /> +91 8142416063</p>
                         </div>
                     </div>
                 </div>

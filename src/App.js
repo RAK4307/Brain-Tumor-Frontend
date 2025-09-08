@@ -9,6 +9,7 @@ import HistoryPage from './components/History/HistoryPage'; // Import HistoryPag
 import About from './components/About/About';
 import { AuthProvider } from './context/AuthContext'; // Import AuthProvider
 import Footer from './components/Footer/Footer';
+import ForgotPassword from './components/ForgotPassword/ForgotPassword';
 import './App.css'; // Basic styling
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/history" element={<HistoryPage />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
             </Routes>
           </main>
           <Footer />

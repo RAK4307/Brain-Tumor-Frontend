@@ -83,7 +83,8 @@
 /* --- Professional Section Headings --- */
 .how-it-works-section h2,
 .team-section h2,
-.quotes-section h2,
+.research-insights-section h2,
+.testimonials-section h2,
 .faq-section h2 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -95,7 +96,8 @@
 
 .how-it-works-section h2::after,
 .team-section h2::after,
-.quotes-section h2::after,
+.research-insights-section h2::after,
+.testimonials-section h2::after,
 .faq-section h2::after {
     content: '';
     position: absolute;
@@ -107,8 +109,12 @@
 }
 
 /* Longer underlines for specific centered headings */
-.quotes-section h2::after {
+.research-insights-section h2::after {
     width: 230px;
+}
+
+.testimonials-section h2::after {
+    width: 280px;
 }
 
 .faq-section h2::after{
@@ -120,13 +126,15 @@
 }
 /* Centered Headings */
 .team-section h2,
-.quotes-section h2,
+.research-insights-section h2,
+.testimonials-section h2,
 .faq-section h2 {
     text-align: center;
 }
 
 .team-section h2::after,
-.quotes-section h2::after,
+.research-insights-section h2::after,
+.testimonials-section h2::after,
 .faq-section h2::after {
     left: 50%;
     transform: translateX(-50%);
@@ -367,8 +375,8 @@
     }
 }
 
-/* --- Quotes Section / Testimonials --- */
-.quotes-section {
+/* --- Research Insights Section --- */
+.research-insights-section {
     width: 100%;
     padding: 100px 20px;
     /* Subtle gradient background for the entire section */
@@ -379,26 +387,26 @@
 }
 
 /* Container to position arrows relative to the card */
-.testimonial-container {
+.research-insights-container {
     position: relative;
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 50px; /* Space for arrows */
 }
 
-/* NEW: Slider viewport to hide non-active cards */
-.testimonial-slider {
+/* Slider viewport to hide non-active cards */
+.insights-slider {
     width: 100%;
 }
 
-/* NEW: Track that holds all cards and slides horizontally */
-.testimonial-track {
+/* Track that holds all cards and slides horizontally */
+.insights-track {
     display: flex;
     transition: transform 0.6s ; /* Smooth, springy slide transition */
 }
 
-/* The main testimonial card */
-.testimonial-card {
+/* The main insight card */
+.insight-card {
     /* Soft radial gradient background for the card */
     /* Background is now set via nth-child selectors for variety */
     border-radius: 30px; /* Large, pill-like rounded corners */
@@ -419,24 +427,24 @@
 }
 
 /* Different professional background colors for each card */
-.testimonial-card:nth-child(1) {
+.insight-card:nth-child(1) {
     background-color: #f4f0ff; /* Light Lavender */
 }
-.testimonial-card:nth-child(2) {
+.insight-card:nth-child(2) {
     background-color: #e8f5e9; /* Soft Mint Green */
 }
-.testimonial-card:nth-child(3) {
+.insight-card:nth-child(3) {
     background-color: #e3f2fd; /* Light Sky Blue */
 }
-.testimonial-card:nth-child(4) {
+.insight-card:nth-child(4) {
     background-color: #fff3e0; /* Pale Peach */
 }
-.testimonial-card:nth-child(5) {
+.insight-card:nth-child(5) {
     background-color: #f5f5f5; /* Light Grey */
 }
 
 /* Company logo at the top */
-.testimonial-logo {
+.insight-logo {
     font-size: 1.2rem;
     font-weight: 600;
     color: #1e3a5f; /* Dark navy blue */
@@ -447,7 +455,7 @@
 }
 
 /* The main quote text */
-.testimonial-text {
+.insight-text {
     font-size: 2rem;
     font-weight: 700;
     color: #1e3a5f; /* Dark navy blue */
@@ -457,7 +465,7 @@
 }
 
 /* Author section container */
-.testimonial-author {
+.insight-author {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -494,7 +502,7 @@
 }
 
 /* Navigation arrows */
-.quotes-section .nav-arrow {
+.research-insights-section .nav-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -515,7 +523,7 @@
 }
 
 /* Gradient ring effect for arrows */
-.quotes-section .nav-arrow::before {
+.research-insights-section .nav-arrow::before {
     content: '';
     position: absolute;
     top: -2px;
@@ -529,7 +537,7 @@
     transform: scale(1);
 }
 
-.quotes-section .nav-arrow:hover {
+.research-insights-section .nav-arrow:hover {
     transform: translateY(-50%) scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.071);
 }
@@ -544,16 +552,16 @@
 
 /* Responsive adjustments */
 @media (max-width: 960px) {
-    .testimonial-container {
+    .research-insights-container {
         padding: 0; /* Remove side padding for arrows to sit on card */
     }
 
-    .testimonial-card {
+    .insight-card {
         padding: 40px;
         border-radius: 20px;
     }
 
-    .quotes-section .nav-arrow {
+    .research-insights-section .nav-arrow {
         background-color: rgba(255, 255, 255, 0.8);
     }
 
@@ -565,25 +573,25 @@
         right: 15px;
     }
 
-    .testimonial-text {
+    .insight-text {
         font-size: 1.5rem;
     }
 }
 
 @media (max-width: 600px) {
-    .quotes-section {
+    .research-insights-section {
         padding: 60px 15px;
     }
 
-    .testimonial-card {
+    .insight-card {
         padding: 30px 20px;
     }
 
-    .testimonial-text {
+    .insight-text {
         font-size: 1.2rem;
     }
 
-    .quotes-section .nav-arrow {
+    .research-insights-section .nav-arrow {
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
@@ -676,4 +684,89 @@
     font-size: 1rem;
     color: #555;
     margin: 0;
+}
+
+    
+
+/* --- Testimonials Section --- */
+.testimonials-section {
+  margin: 48px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #f6f8fa;
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgba(52, 152, 219, 0.07);
+  padding: 32px 24px 24px 24px;
+  min-width: 220px;
+  max-width: 280px;
+  flex: 1;
+  text-align: center;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-img-wrapper {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.testimonial-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.testimonial-video-bar {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.08);
+  padding: 4px 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.testimonial-title {
+  color: #22364a;
+  font-size: 1.22rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.testimonial-desc {
+  color: #22364a;
+  font-size: 1.08rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonials-row {
+    flex-direction: column;
+    gap: 18px;
+    max-width: 98vw;
+  }
+  .testimonial-card {
+    max-width: 98vw;
+    min-width: unset;
+  }
 }
