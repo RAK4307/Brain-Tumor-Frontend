@@ -24,7 +24,7 @@ const ForgotPassword = () => {
     setOtpError('');
     setResendSuccess(false);
     try {
-      const response = await fetch('/api/send-otp', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api/send-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
@@ -72,7 +72,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setOtpError('');
     try {
-      const response = await fetch('/api/verify-otp', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api/verify-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp: otp.join('') })
@@ -108,7 +108,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setResetError('');
     try {
-      const response = await fetch('/api/reset-password', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api/reset-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password: newPassword })

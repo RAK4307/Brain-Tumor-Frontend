@@ -20,8 +20,8 @@ function Navbar() {
   return (
     <nav className="main-navbar">
       <NavLink to="/" className="navbar-logo">
-        <img src={logoImg} alt="Logo" className="navbar-logo-img" />
-        <span className="navbar-title"> Brain Tumor <br />Detection</span>
+        <img src={logoImg} alt="DeepNeuroVision Logo" className="navbar-logo-img" />
+        <span className="navbar-title">DeepNeuroVision</span>
       </NavLink>
 
       <button

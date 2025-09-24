@@ -133,14 +133,13 @@ const LoginPage = () => {
           <div className="brand-icon">
             <img
               src={logIcon}
-              alt="Brain Tumor Detection Logo"
+              alt="DeepNeuroVision Logo"
               className="logo-image"
             />
           </div>
-          <h1>Brain Tumor Detection</h1>
-          <p>
-            Welcome back! Please login to access your dashboard and start detecting brain tumors from MRI scans.
-          </p>
+          <h1>DeepNeuroVision</h1>
+
+          <p>Welcome back! Please log in to access your account and utilize our advanced segmentation tools.</p>
         </div>
         <form className="login-form-panel" onSubmit={handleLogin}>
           <h2>Login</h2>

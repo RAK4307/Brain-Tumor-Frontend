@@ -6,7 +6,7 @@ import './Chatbot.css';
 function Chatbot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { id: 1, sender: 'bot', text: 'Hello! How can I help you today?' }
+    { id: 1, sender: 'bot', text: 'Hi! I am NeuroCare AI, your assistant for the DeepNeuroVision application. How can I help you today?' }
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -31,7 +31,7 @@ function Chatbot() {
         ]);
     } else if (open && isLoggedIn && messages.length > 0 && messages[0].text.includes('log in')) {
         // If they log in while the chatbot is open, reset the welcome message.
-        setMessages([{ id: 1, sender: 'bot', text: 'Hello! How can I help you today?' }]);
+        setMessages([{ id: 1, sender: 'bot', text: 'Hi! I am NeuroCare AI, your assistant for the DeepNeuroVision application. How can I help you today?' }]);
     }
   }, [open, isLoggedIn, messages]);
 
@@ -87,7 +87,7 @@ function Chatbot() {
       {open && (
         <div className="chatbot-container">
           <div className="chatbot-header">
-            Chatbot
+            NeuroCare AI 🧠
             <button className="chatbot-close" onClick={() => setOpen(false)} aria-label="Close chatbot">&times;</button>
           </div>
           <div className="chatbot-messages">

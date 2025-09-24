@@ -6,6 +6,8 @@ import profileImage1 from '../../assets/Team/Anil.jpg';
 import profileImage2 from '../../assets/Team/Sai.jpg'; 
 import profileImage3 from '../../assets/Team/Harsha.jpg';
 import profileImage4 from '../../assets/Team/Raju.jpg';
+import profileImage5 from '../../assets/Team/Vamsi.jpg';
+import heroVideo from '../../assets/brain.mp4';
 
 import Alex from '../../assets/Research-imgs/alex.png'
 import Ben from '../../assets/Research-imgs/ben.jpeg'
@@ -18,7 +20,7 @@ const infoSections = [
     id: 'team',
     title: 'Our Team',
     members: [
-      { name: 'Vamsi', role: 'Mentor & Project Guide', profess: 'Associate Professor, Department of Computer Science and Engineering, VLITS', year: '2022 - 2026', bio: 'As Mentor and Project Guide, Vamsi provides expert guidance and leadership throughout the project lifecycle. With deep expertise in computer science and engineering, he ensures the team follows best practices in AI and software development, and his mentorship is instrumental in achieving high-accuracy results for brain MRI classification.', imgSrc: profileImage1 },
+      { name: 'Vamsi', role: 'Mentor & Project Guide', profess: 'Assistant Professor, Department of Computer Science and Engineering, VLITS', year: '2022 - 2026', bio: 'As Mentor and Project Guide, Vamsi provides expert guidance and leadership throughout the project lifecycle. With deep expertise in computer science and engineering, he ensures the team follows best practices in AI and software development, and his mentorship is instrumental in achieving high-accuracy results for brain MRI classification.', imgSrc: profileImage5 },
       { name: 'R. Anil Kumar', role: 'Project Lead & Full Stack Developer', profess: 'Student', year: '2022 - 2026', bio: 'Anil Kumar leads the team as Project Lead and Full Stack Developer, overseeing both frontend and backend development. He specializes in building seamless user interfaces and robust server-side logic, ensuring users can easily upload MRI scans and receive clear, actionable analysis.', imgSrc: profileImage1 },
       { name: 'T. Sai Kumar', role: 'Documentation & Research Assistant', profess: 'Student', year: '2022 - 2026', bio: 'Sai Kumar excels in technical documentation and research, supporting the team with thorough literature reviews and clear project documentation. He also assists in backend development, helping to architect secure APIs and manage data flow for reliable model serving.', imgSrc: profileImage2 },
       { name: 'A. Harsha', role: 'ML Engineer', profess: 'Student', year: '2022 - 2026', bio: 'Harsha is the team’s Machine Learning Engineer, responsible for data sourcing, cleaning, and augmentation. His expertise in preparing medical imaging datasets and optimizing model training directly contributes to the project’s high performance and reliability.', imgSrc: profileImage3 },
@@ -157,6 +159,10 @@ function HomePage() {
   return (
     <div className="home-page">
       <header className="home-header">
+        <video autoPlay loop muted className="hero-video">
+            <source src={heroVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
         <div className="hero-content">
           <h1>Advanced Brain Tumor Detection with AI</h1>
           <p className="subtitle">Leveraging deep learning to provide fast and accurate preliminary analysis of MRI scans.</p>

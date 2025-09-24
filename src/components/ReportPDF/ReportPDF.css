@@ -1,0 +1,107 @@
+/* Styles for the PDF Report Component */
+.pdf-container {
+    width: 210mm; /* A4 width */
+    min-height: 297mm; /* A4 height */
+    padding: 20mm;
+    box-sizing: border-box;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #333;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.pdf-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.pdf-header h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.pdf-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.pdf-section {
+    margin-bottom: 25px;
+}
+
+.pdf-section h2 {
+    font-size: 20px;
+    color: #3498db;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.pdf-details-grid,
+.pdf-summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.pdf-details-grid div,
+.pdf-summary-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.pdf-summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pdf-summary-title,
+.pdf-details-grid strong {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.pdf-summary-value {
+    font-weight: normal;
+}
+
+.pdf-summary-value.tumor {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.pdf-summary-value.no-tumor {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.pdf-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 10px;
+    color: #7f8c8d;
+}
+
+.pdf-footer p {
+    margin: 3px 0;
+}
+
+/* Ensure single column on smaller grids if needed */
+@media (max-width: 600px) {
+    .pdf-details-grid,
+    .pdf-summary-grid {
+        grid-template-columns: 1fr;
+    }
+}

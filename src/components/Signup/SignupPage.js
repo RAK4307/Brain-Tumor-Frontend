@@ -63,7 +63,7 @@ function SignupPage() {
                     <div className="signup-brand-icon">
                         <img
                             src={logIcon}
-                            alt="Brain Tumor Detection Logo"
+                            alt="DeepNeuroVision Logo"
                             style={{
                                 width: '130px',
                                 height: '130px',
@@ -73,9 +73,9 @@ function SignupPage() {
                             }}
                         />
                     </div>
-                    <h1>Brain Tumor Detection</h1>
+                    <h1>DeepNeuroVision</h1>
                     <p>
-                        Join us and leverage AI for fast, accurate brain tumor detection from MRI scans. Create your account to get started!
+                        Unlock the power of AI for automated segmentation of neurological disorders in MRI scans. Create your account to get started.
                     </p>
                 </div>
                 <form className="signup-form-card" onSubmit={handleSubmit}>

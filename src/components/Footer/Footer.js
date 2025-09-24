@@ -20,9 +20,9 @@ function Footer() {
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-section about">
-                    <h2 className="footer-logo">Brain Tumor Detection</h2>
+                    <h2 className="footer-logo">DeepNeuroVision</h2>
                     <p>
-                        Leveraging AI to provide fast and accurate brain tumor detection from MRI scans. Our mission is to aid medical professionals in early diagnosis.
+                        DeepNeuroVision delivers precise, AI-powered segmentation of neurological disorders from MRI scans. Our mission is to empower medical professionals with advanced diagnostic tools for earlier detection and better patient outcomes.
                     </p>
                 </div>
                 <nav className="footer-section links" aria-label="Footer Navigation">
@@ -65,7 +65,7 @@ function Footer() {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Brain Tumor Detection. All Rights Reserved.</p>
+                <p>&copy; {new Date().getFullYear()} DeepNeuroVision. All Rights Reserved.</p>
             </div>
         </footer>
     );
